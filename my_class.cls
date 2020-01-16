@@ -26,68 +26,30 @@
 % #5 = Version
 % #6 = Date
 \newcommand{\mainpage}[6]{
-  \begin{titlepage} % Suppresses headers and footers on the title page
-
-  \centering % Centre everything on the title page
-  
-  \scshape % Use small caps for all text on the title page
-  
-  \vspace*{\baselineskip} % White space at the top of the page
-  
-  %------------------------------------------------
-  % Title
-  %------------------------------------------------
-  
-  \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal rule
-  \rule{\textwidth}{0.4pt} % Thin horizontal rule
-  
-  \vspace{0.75\baselineskip} % Whitespace above the title
-  
-  {\LARGE #1} % Title
-  
-  \vspace{0.75\baselineskip} % Whitespace below the title
-  
-  \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal rule
-  \rule{\textwidth}{1.6pt} % Thick horizontal rule
-  
-  \vspace{2\baselineskip} % Whitespace after the title block
-  
-  %------------------------------------------------
-  % Subtitle
-  %------------------------------------------------
-  
-  #2 % Subtitle or further description
-  
-  \vspace*{3\baselineskip} % Whitespace under the subtitle
-  
-  %------------------------------------------------
-  % Editor(s)
-  %------------------------------------------------
-  
-  Edited By
-  
-  \vspace{0.5\baselineskip} % Whitespace before the editors
-  
-  {\scshape\Large #3 \\} % Editor list
-  
-  \vspace{0.5\baselineskip} % Whitespace below the editor list
-  
-  \textit{#4} % Editor affiliation
-  
-  \vfill % Whitespace between editor names and publisher logo
-  
-  %------------------------------------------------
-  % Publisher
-  %------------------------------------------------
-  
-  \plogo % Publisher logo
-  
-  \vspace{0.3\baselineskip} % Whitespace under the publisher logo
-  
-  #6 % Publication year
-  
-  {\large #5} % Publisher
-
+  \begin{titlepage}
+  \centering
+  \scshape
+  \vspace*{\baselineskip}
+  \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+  \rule{\textwidth}{0.4pt}
+  \vspace{0.75\baselineskip}
+  {\LARGE #1}
+  \vspace{0.75\baselineskip}
+  \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+  \rule{\textwidth}{1.6pt}
+  \vspace{2\baselineskip}
+  #2 \\
+  \vspace*{3\baselineskip}
+  Edited By \\
+  \vspace{0.5\baselineskip}
+  {\scshape\Large #3 \\}
+  \vspace{0.5\baselineskip}
+  \textit{#4}
+  \vfill
+  \plogo
+  \vspace{0.3\baselineskip}
+  #6 \\
+  {\large #5}
 \end{titlepage}
 }
 
