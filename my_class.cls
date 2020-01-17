@@ -9,10 +9,6 @@
 \usepackage{color}
 \usepackage[table]{xcolor}
 \usepackage{titlesec}
-\usepackage{amsmath}
-\usepackage{tikz}
-\usepackage{epigraph}
-\usepackage{lipsum}
 \usepackage{booktabs}
 
 % Define the main colors
