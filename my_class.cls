@@ -1,6 +1,5 @@
 % About this document
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{my_class}[2020/01/15 Test]
 
 % Default article class
 \LoadClass{article}
@@ -10,6 +9,8 @@
 \usepackage[table]{xcolor}
 \usepackage{titlesec}
 \usepackage{booktabs}
+\usepackage{tabularx}
+
 
 % For the titlepage template
 \usepackage[utf8]{inputenc} % Required for inputting international characters
@@ -19,6 +20,7 @@
 % Define the main colors
 \definecolor{brown}{rgb}{0.83, 0.61, 0.33}
 \definecolor{grey}{rgb}{0.68, 0.68, 0.68}
+
 
 
 % Main page
@@ -61,16 +63,53 @@
   {\thesubsection. }{0em}
   {}
 
-
-
-\newenvironment{tab}[3]{
-  \begin{tabular}{c c c}
-  \toprule
+  
+\newenvironment{table1}[1]{
+  \tabularx{\textwidth}{X}
   \rowcolor{brown}
-  #1 & #2 & #3 \\
+  \textbf{#1} \\
   \midrule
 }
 {
-  \bottomrule
-  \end{tabular}
+  \endtabularx
+}
+  
+\newenvironment{table2}[2]{
+  \tabularx{\textwidth}{X X}
+  \rowcolor{brown}
+  \textbf{#1} & \textbf{#2} \\
+  \midrule
+}
+{
+  \endtabularx
+}
+
+\newenvironment{table3}[3]{
+  \tabularx{\textwidth}{X X X}
+  \rowcolor{brown}
+  \textbf{#1} & \textbf{#2} & \textbf{#3} \\
+  \midrule
+}
+{
+  \endtabularx
+}
+
+\newenvironment{table4}[4]{
+  \tabularx{\textwidth}{X X X X}
+  \rowcolor{brown}
+  \textbf{#1} & \textbf{#2} & \textbf{#3} & \textbf{#4} \\
+  \midrule
+}
+{
+  \endtabularx
+}
+
+\newenvironment{table5}[5]{
+  \tabularx{\textwidth}{X X X X X}
+  \rowcolor{brown}
+  \textbf{#1} & \textbf{#2} & \textbf{#3} & \textbf{#4} & \textbf{#5} \\
+  \midrule
+}
+{
+  \endtabularx
 }
