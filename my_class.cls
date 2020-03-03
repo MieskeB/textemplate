@@ -11,7 +11,6 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 
-
 % For the titlepage template
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
@@ -21,6 +20,10 @@
 \definecolor{brown}{rgb}{0.83, 0.61, 0.33}
 \definecolor{grey}{rgb}{0.68, 0.68, 0.68}
 
+
+% Appendix on new page automatically
+\let\stdappendix\appendix
+\renewcommand\appendix{\newpage\stdappendix}
 
 
 % Main page
