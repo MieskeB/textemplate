@@ -11,6 +11,11 @@
 \usepackage{titlesec}
 \usepackage{booktabs}
 
+% For the titlepage template
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{stix} % Use the STIX fonts
+
 % Define the main colors
 \definecolor{brown}{rgb}{0.83, 0.61, 0.33}
 \definecolor{grey}{rgb}{0.68, 0.68, 0.68}
@@ -24,30 +29,24 @@
 % #5 = Version
 % #6 = Date
 \newcommand{\mainpage}[6]{
-  \begin{titlepage}
-    \centering
-    \scshape
-    \vspace*{\baselineskip}
-    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
-    \rule{\textwidth}{0.4pt}
-    \vspace{0.75\baselineskip}
-    {\LARGE #1}
-    \vspace{0.75\baselineskip}
-    \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
-    \rule{\textwidth}{1.6pt}
-    \vspace{2\baselineskip}
-    #2 \\
-    \vspace*{3\baselineskip}
-    Edited By \\
-    \vspace{0.5\baselineskip}
-    {\scshape\Large #3 \\}
-    \vspace{0.5\baselineskip}
-    \textit{#4}
-    \vfill
-    \vspace{0.3\baselineskip}
-    #6 \\
-    {\large #5}
-  \end{titlepage}
+  \begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+	
+	\raggedleft % Right align the title page
+	
+	\rule{1pt}{\textheight} % Vertical line
+	\hspace{0.05\textwidth} % Whitespace between the vertical line and title page text
+	\parbox[b]{0.75\textwidth}{ % Paragraph box for holding the title page text, adjust the width to move the title page left or right on the page
+		
+		{\Huge\bfseries {#1}}\\[2\baselineskip] % Title
+		{\large\textit{#2}}\\[4\baselineskip] % Subtitle or further description
+		{\Large\textsc{#3}} % Author name, lower case for consistent small caps
+		
+		\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+		
+		{\noindent #4 \\ #5 \\ #6}\\[\baselineskip] % Publisher and logo
+	}
+
+\end{titlepage}
 }
 
 
