@@ -44,7 +44,6 @@
     \vspace{0.5\baselineskip}
     \textit{#4}
     \vfill
-    \plogo
     \vspace{0.3\baselineskip}
     #6 \\
     {\large #5}
