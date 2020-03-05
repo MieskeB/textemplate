@@ -1,0 +1,29 @@
+% Section
+\newglossaryentry{scg}
+{
+	name={Section},
+	description={A section in a document}
+}
+\newglossaryentry{sc}
+{
+	type=\acronymtype,
+	name={SC},
+	description={Section},
+	first={section (SC)\glsadd{scg}},
+	see=[Glossary:]{scg}
+}
+
+% Subsection
+\newglossaryentry{sscg}
+{
+	name={Subsection},
+	description={A subsection in a document}
+}
+\newglossaryentry{ssc}
+{
+	type=\acronymtype,
+	name={SSC},
+	description={Subsection},
+	first={subsection (SSC)\glsadd{sscg}},
+	see=[Glossary:]{sscg}
+}

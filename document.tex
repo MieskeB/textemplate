@@ -1,36 +1,28 @@
 \documentclass{my_class}
 
+\input{document/woordenlijst}
+
+
 \begin{document}
 
-  \mainpage{Title}{Subtitle}{Name 1 \\ Name 2}{School/company}{Version}{Date}
+\mainpage{Title}{Subtitle}{Name 1 \\ Name 2}{School/company}{v0.1}{\selectlanguage{english}\today}
 
-  
-  % Title of tableofcontents
-  \renewcommand{\contentsname}{Contents}
-  \tableofcontents
-  \newpage
-
-
-  \section{Section}
-  This is the first section
-
-  \subsection{Subsection}
-  This is the first subsection
-
-  \subsection{Subsection}
-  This is the second subsection
+% Title of tableofcontents
+\renewcommand{\contentsname}{Contents}
+\tableofcontents
+\newpage
 
 
-  \section{Section}
+\input{document/firstsection}
 
-  \subsection{Subsection}
-  This is the third subsection
+\input{document/secondsection}
 
-  \subsection{table}
-  \begin{table3}{header1}{header2}{header3}
-    1 & 2 & 3 \\
-    4 & 5 & 6 \\
-    7 & 8 & 9 \\
-  \end{table3}
+
+\appendix
+\section{Glossary and acronyms}
+
+\renewcommand*{\glossaryname}{Glossary}
+\renewcommand*{\acronymname}{Acronym}
+\printglossaries
 
 \end{document}

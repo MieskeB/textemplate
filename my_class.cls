@@ -4,12 +4,21 @@
 % Default article class
 \LoadClass{article}
 
+% Multilanguage support
+\usepackage[dutch, ngerman, english]{babel}
+
 % For header customization
 \usepackage{color}
 \usepackage[table]{xcolor}
 \usepackage{titlesec}
 \usepackage{booktabs}
 \usepackage{tabularx}
+
+% For term list
+\usepackage[acronym]{glossaries}
+
+\makeglossaries
+
 
 % For the titlepage template
 \usepackage[utf8]{inputenc} % Required for inputting international characters
@@ -65,7 +74,11 @@
   {\color{brown}\large\scshape\raggedright}
   {\thesubsection. }{0em}
   {}
-
+\titleformat{\subsubsection}
+  {\color{brown}\large\scshape\raggedright}
+  {\thesubsubsection. }{0em}
+  {}
+  
   
 \newenvironment{table1}[1]{
   \tabularx{\textwidth}{X}
