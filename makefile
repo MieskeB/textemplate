@@ -1,28 +1,16 @@
 # sudo apt-get install texlive-full
 # shopt -s extglob
 
-.PHONY: all pva sad onderzoek_techniek clean
+.PHONY: all document clean
 
-all: pva sad onderzoek_techniek
+all: document
 
-pva:
-	@echo "\e[32mPlan van aanpak\e[39m"
-	pdflatex -output-directory=./out pva.tex
-	makeglossaries -d out pva
-	pdflatex -output-directory=./out pva.tex
-
-sad:
-	@echo "\e[32mSoftware architectuur document\e[39m"
-	pdflatex -output-directory=./out sad.tex
-	makeglossaries -d out sad
-	pdflatex -output-directory=./out sad.tex
-
-onderzoek_techniek:
-	@echo "\e[32mSoftware architectuur document\e[39m"
-	pdflatex -output-directory=./out onderzoek_techniek.tex
-	makeglossaries -d out onderzoek_techniek
-	pdflatex -output-directory=./out onderzoek_techniek.tex
-
+document:
+	@echo "\e[32mDocument\e[39m"
+	pdflatex -output-directory=./out document.tex
+	makeglossaries -d out document
+	pdflatex -output-directory=./out document.tex
+	
 clean:
 	@echo "\e[32mCleaning\e[39m"
 	rm ./out/*.acn -v
