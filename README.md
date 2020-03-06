@@ -65,7 +65,7 @@ To add the glossary to the document, add the following line to the top of the do
 ```
 
 Then to build the document, run the following three lines (in case where the document's name is 'document'):
-```latex
+```bash
 pdflatex -output-directory=./out document.tex
 makeglossaries -d out document
 pdflatex -output-directory=./out document.tex
