@@ -129,3 +129,7 @@
 {
   \endtabularx
 }
+
+\newcommand{\mainquestion}[1]{
+	\hspace{5mm}\textit{#1}
+}
