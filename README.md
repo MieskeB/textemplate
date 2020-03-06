@@ -1,2 +1,2 @@
 # textemplates
-All the personal templates from me
+My personal template
